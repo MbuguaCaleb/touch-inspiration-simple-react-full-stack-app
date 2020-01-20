@@ -1,6 +1,6 @@
 **Running the Application**
 
 ```
-npm start
+1. npm start-starting the development-server.
 
 ```
