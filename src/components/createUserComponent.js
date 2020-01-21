@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export class createUserComponent extends Component {
   constructor(props) {
@@ -48,10 +49,27 @@ export class createUserComponent extends Component {
     e.preventDefault();
 
     console.log(`Form submitted`);
-    console.log(`name:${this.state.name}`);
-    console.log(`occupation:${this.state.occupation}`);
-    console.log(`email:${this.state.email}`);
-    console.log(`bio:${this.state.bio}`);
+    console.log(
+      `name:${this.state.name} ,occupation:${this.state.occupation},email:${this.state.email},bio:${this.state.bio}`
+    );
+
+    //User object
+    const newUser = {
+      name: this.state.name,
+      email: this.state.email,
+      occupation: this.state.occupation,
+      bio: this.state.bio
+    };
+
+    //returns a promise
+    axios
+      .post(
+        "http://localhost:4000/api/one-touch-inspiration/createUser",
+        newUser
+      )
+      .then(res => console.log(res.data));
+
+      
 
     //Resetting to empty upon submit
     this.setState({
