@@ -25,7 +25,7 @@ export class usersListComponent extends Component {
     axios
       .get("http://localhost:4000/api/one-touch-inspiration/usersList")
       .then(response => {
-        console.log(response);
+        console.log(response.data);
         this.setState({ users: response.data });
       })
       .catch(function(error) {
