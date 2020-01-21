@@ -80,6 +80,8 @@ With your permission i shall send an updated version of this work.
 ```
 (a)Thank you for grating the opportunity of looking on a fullstack react appliation! It was such a helpful task.I will see to it that i finish this task moreso the  implementation of it in redux.
 
+(b)It was great learning quite a great amount of react over the weekend.I will for sure continue even more with this. 
+
 
 ```
 
