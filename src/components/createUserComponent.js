@@ -70,7 +70,6 @@ export class createUserComponent extends Component {
       .then(res => console.log(res.data));
 
       
-
     //Resetting to empty upon submit
     this.setState({
       name: "",
