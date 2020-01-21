@@ -1,25 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
-import UserComponent from "./UserComponent";
+import UserComponent from "./userComponent";
 
-export class usersListComponent extends Component {
+class usersListComponent extends Component {
   constructor(props) {
     super(props);
 
     //initial state
     this.state = { users: [] };
   }
-  //component LifeCycle Method
-  // componentDidMount() {
-  //   axios
-  //     .get("http://localhost:4000/api/one-touch-inspiration/usersList")
-  //     .then(response => {
-  //       console.log(response.data);
-  //       this.setState({ users: response.data }).catch(error => {
-  //         console.log(error);
-  //       });
-  //     });
-  // }
 
   componentDidMount() {
     axios
@@ -33,11 +22,9 @@ export class usersListComponent extends Component {
       });
   }
 
-  //custom userList Method
   userList() {
-    //Method which gets the state then loops through
-    return (this.state.users.map = user => {
-      return <UserComponent userobj={user} key={user._id} />;
+    return (this.state.users.map = currentUser => {
+      return <UserComponent user={currentUser} key={currentUser._id}/>;
     });
   }
 
@@ -55,8 +42,7 @@ export class usersListComponent extends Component {
               <th>Actions</th>
             </tr>
           </thead>
-
-          <tbody>{this.userList()}</tbody>
+          <tbody> {this.userList()}</tbody>
         </table>
       </div>
     );
