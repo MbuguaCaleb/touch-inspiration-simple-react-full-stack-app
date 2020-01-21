@@ -20,9 +20,13 @@ i change the app url to the url which you  gave to us
 
 **API REPOSITORY**
 
-[PostManApi Docs](https://github.com/MbuguaCaleb/touch_inspiration_node_js_api
+[API REPOSITORY](https://github.com/MbuguaCaleb/touch_inspiration_node_js_api
 )
 
+```
+The above repository mimics the one you provied to us.
+
+```
 
 **API DOCS**
 
